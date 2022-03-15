@@ -1,0 +1,40 @@
+/* body */
+.edit{
+  display: flex;
+  flex-direction:row-reverse;
+  color:#4169e1;
+}
+.edit:hover{
+  color:gray;
+}
+.edit p{
+  text-decoration: underline;
+}
+.profile-img{
+  text-align: center;
+  matgin-top:2em;
+}
+.profile-img img{
+  padding:5px;
+  border:1px solid black;
+  border-radius: 50%;
+}
+.contents{
+  margin:2em auto;
+  max-width: 700px;
+  text-align: center;
+}
+.con{
+  margin-top: 2em;
+}
+.name{
+  text-align: center;
+}
+.title{
+  margin-bottom:0.5em;
+  font-size: 1.5em;
+}
+.text{
+  margin-left:1em;
+}
+

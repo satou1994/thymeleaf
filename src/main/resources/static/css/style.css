@@ -1,0 +1,12 @@
+@charset "UTF-8";
+body{
+	font-size:13px;
+	color:gray;
+	margin:5px 25px;
+
+}
+
+pre{
+	border:solid 3px #ddd;
+	padding:10px;
+}

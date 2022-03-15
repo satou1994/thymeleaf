@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>upload</title>
+</head>
+<body>
+<div><img th:src="${base64image}"/></div>
+
+
+    <!-- formにenctypeを設定しない場合、画像の中身が送信されないため注意 -->
+    <form th:action="@{/upload}" th:object="${imageForm}" method="post" enctype="multipart/form-data">
+        ファイルを選択： <input type="file" th:field="*{image}" /><br /> <input type="submit" value="送信する" />
+    </form>
+
+</body>
+</html>

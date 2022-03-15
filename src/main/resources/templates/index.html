@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thymeleaf Top</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="flexbox">
+      <div class="nav-img">
+        <a th:href="@{/}"><img th:src="@{/imgs/logo2.jpg}" alt="logo"></a>
+      </div>
+      <div class="nav-link">
+        <ul class="flexbox">
+          <li ><a href="/accountCreate">Create Account</a></li>
+          <li ><a href="/login">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+	<main>
+		<h1>Hello page</h1>
+		<p>ようこそ！Spring Framework で作成したサイトです！</p>
+	</main>
+  <footer>
+    <small> &copy; 2021 sato</small>
+  </footer>
+</body>
+</html>

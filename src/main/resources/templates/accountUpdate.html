@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>accountCreate</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/accountUpdate.css">
+</head>
+<body>
+	<h1>Create Update</h1>
+
+<article class="update content-inner">
+	<h2 class="headline">編集</h2>
+	<span th:each="error : ${#fields.detailedErrors()}" class="err" th:text="${error.message}" style="color: red"></span>
+	<form method="post" name="accountUpdate" th:action="@{/accountUpdate}" th:object="${formModel}">
+	<div class="form-group">
+    <label for="exampleFormControlTextarea1">名前</label>
+		<input class="form-textarea" type="text" th:value="${account.username}">
+  </div>
+	<!-- <span th:if="${#fields.hasErrors('email')}" th:errors="*{}" style="color: red"></span> -->
+	<div class="form-group">
+    <label for="exampleFormControlTextarea1">Email</label>
+		<input class="form-textarea" type="text" th:value="${account.email}">
+  </div>
+
+	<div class="form-group">
+    <label for="exampleFormControlTextarea1">プロフィール</label>
+		<input class="form-textarea" type="text" th:value="${account.profile}">
+  </div>
+	  <button type="submit" class="btn">Submit</button>
+	</form>
+</article>
+
+</body>
+</html>

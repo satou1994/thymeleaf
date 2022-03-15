@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>account</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<h1>Account All</h1>
+<table>
+	<!-- formにenctypeを設定しない場合、画像の中身が送信されないため注意 -->
+<form th:action="@{/accountAll}" th:object="${formModel}" enctype="multipart/form-data" method="post" >
+	<ul>
+		<li th:each="error : ${#fields.detailedErrors()}" class="err" th:text="${error.message}">
+	</ul>
+		<tr>
+			<td><label for="username">名前</label></td>
+			<td><input type="text" name="username" th:value="*{username}" /></td>
+		</tr>
+		<tr>
+			<td><label for="password">パスワード</label></td>
+			<td><input type="text" name="password" th:value="*{password}" /></td>
+		</tr>
+		<tr>
+		<tr>
+			<td><label for="email">Email</label></td>
+			<td><input type="text" name="email" th:value="*{email}" /></td>
+		</tr>
+		<tr>
+			<td><label for="profile">Profile</label></td>
+			<td><input type="text" name="profile" th:value="*{profile}" /></td>
+		</tr>
+		<tr>
+		<tr>
+			<td></td><td><input type="submit" /></td>
+		</tr>
+	</form>
+</table>
+<hr/>
+<table>
+	<tr><th>ID</th><th>名前</th><th>パスワード</th><th>Email</th><th>プロフィール</th><th>権限</th></tr>
+	<tr th:each="obj : ${datalist}">
+		<td><span th:text="${obj.id}"></span>/</td>
+		<td><span th:text="${obj.username}"></span>/</td>
+		<td><span th:text="${obj.password}"></span>/</td>
+		<td><span th:text="${obj.email}"></span>/</td>
+		<td><span th:text="${obj.profile}"></span>/</td>
+		<td><span th:text="${obj.role}"></span>/</td>
+	</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>edit page</title>
+</head>
+<body>
+<h1 th:text="${title}">Edit page</h1>
+<table>
+	<form method="post" th:action="@{/delete}" th:object="${formModel}">
+		<input type="hidden" name="id" th:value="*{id}">
+		<tr><td><p th:text="|名前: *{name}|"></p></td></tr>
+		<tr><td><p th:text="|年齢: *{age}|"></p></td></tr>
+		<tr><td><p th:text="*{mail}"></p></td></tr>
+		<tr><td><p th:text="*{memo}"></p></td></tr>
+		<tr><td><input type="submit" value="delete"></td></tr>
+	</form>
+</table>
+
+</body>
+</html>
